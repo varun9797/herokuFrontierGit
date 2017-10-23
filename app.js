@@ -1,6 +1,6 @@
 var express = require("express");
 var server = express();
-var PORT = 3000;
+var port = process.env.PORT || 3001
 var mongo = require("./MongoDB/app");
 var bodyParser = require('body-parser')
 server.use(bodyParser.urlencoded({
