@@ -24,7 +24,7 @@ app.controller("packageController", ['$scope', '$rootScope', '$state', 'dbServic
             });
             console.log("check1 ..")
             console.log(check1)
-                //return data;
+            //return data;
         }, function (error) {
         })
     $scope.showVoiceFunction = function () {

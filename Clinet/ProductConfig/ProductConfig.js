@@ -8,9 +8,9 @@ app.controller("productConfigController", ['$scope', 'dbServices', '$rootScope',
         $scope.showConfig = true;
         console.log("listining broadcasr in config data " + data);
         $scope.productInfo = data;
-        
+
         $scope.productInfo.id = quoteId;
-        
+
     })
     $rootScope.saveQuoteItem = function () {
         $scope.productInfo.uniqueId = Date.now();

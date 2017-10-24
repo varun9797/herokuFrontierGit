@@ -4,22 +4,22 @@ app.factory('dbServices', ['$http', function ($http) {
     var dbServices = {};
 
     dbServices.findUser = function (phoneNum) {
-        return $http.get(urlBase+'/findUser/'+phoneNum);
+        return $http.get(urlBase + '/findUser/' + phoneNum);
     };
     dbServices.findAll = function () {
-        return $http.get(urlBase+'/findAll');
+        return $http.get(urlBase + '/findAll');
     };
     dbServices.createQuote = function (data) {
-        return $http.post(urlBase+'/add',data);
+        return $http.post(urlBase + '/add', data);
     };
     dbServices.findQuote = function (guid) {
-        return $http.get(urlBase+'/findQuote/'+guid);
+        return $http.get(urlBase + '/findQuote/' + guid);
     };
     dbServices.updateQuoteItem = function (data) {
-        return $http.post(urlBase+'/update', data);
+        return $http.post(urlBase + '/update', data);
     };
     dbServices.deleteQuoteItemElement = function (data) {
-        return $http.post(urlBase+'/deleteElement', data);
+        return $http.post(urlBase + '/deleteElement', data);
     };
     return dbServices;
 

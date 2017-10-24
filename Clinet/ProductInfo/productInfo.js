@@ -5,8 +5,8 @@ var app = app.controller("productInfoController", ['$scope', 'dbServices', '$roo
     })
     $scope.getTotal = function () {
         var total = 0;
-        if($scope.customer && $scope.customer.quoteItems && $scope.customer.quoteItems.length > 0) {
-            for(var i = 0; i < $scope.customer.quoteItems.length; i++) {
+        if ($scope.customer && $scope.customer.quoteItems && $scope.customer.quoteItems.length > 0) {
+            for (var i = 0; i < $scope.customer.quoteItems.length; i++) {
                 var product = $scope.customer.quoteItems[i];
                 total += Number(product.Price);
             }
@@ -27,7 +27,7 @@ var app = app.controller("productInfoController", ['$scope', 'dbServices', '$roo
                 $scope.myWelcome = response.statusText;
             });
     }
-    
+
     $rootScope.$on("getQuoteItem", function (b, data) {
         console.log("checking broadcast...");
         var quoteId = $stateParams.quoteId;
